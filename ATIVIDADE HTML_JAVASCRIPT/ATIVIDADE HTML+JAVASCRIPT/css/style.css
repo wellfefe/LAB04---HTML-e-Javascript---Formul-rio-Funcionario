@@ -1,0 +1,24 @@
+body {
+font-family: system-ui, sans-serif;
+background: #0805a044;
+color: #e7edf5;
+margin: 0;
+}
+header { text-align:center; padding: 24px; }
+.container { max-width: 1000px; margin: auto; padding: 20px; }
+.card { background:#111936; border-radius: 10px; padding: 20px; margin-bottom: 20px; }
+.grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 10px; }
+input, select, button { width: 100%; padding: 8px; border-radius: 6px; border: none; }
+.btn { cursor:pointer; font-weight: bold; }
+.primary { background:#2454ff; color:white; }
+.success { background:#19c37d; color:black; }
+.muted { background:#54552b; color:white; }
+.warn { background:#ff2020; color:black; }
+
+
+/* tabela */
+table { width:100%; border-collapse: collapse; margin-top: 10px; }
+th, td { border-bottom: 1px solid #222a4a; padding: 8px; text-align: left; }
+.badge.ok { color: #19c37d; }
+.badge.bad { color: #ff5a5f; }
+.output { background: #0d1830; padding:10px; border-radius: 8px; margin-top:10px; white-space:pre-wrap; }

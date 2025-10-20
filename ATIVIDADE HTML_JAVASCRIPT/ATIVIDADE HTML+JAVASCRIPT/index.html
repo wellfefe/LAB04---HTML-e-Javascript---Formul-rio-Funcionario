@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>LAB03 – Gestão de Alunos (CRUD + Relatórios)</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header>
+<h1>Estudo de Caso – Gestão de Alunos</h1>
+<p>HTML + JavaScript (CRUD, Classe <em>Aluno</em>, Eventos e Relatórios com <code>filter/map/reduce/sort</code>)</p>
+</header>
+
+
+<main class="container">
+<section class="card">
+<h2>Cadastro de Alunos</h2>
+<form id="alunoForm">
+<div class="grid">
+<div>
+<label for="nome">Nome</label>
+<input id="nome" name="nome" type="text" placeholder="Ex.: Ana Silva" required />
+</div>
+<div>
+<label for="idade">Idade</label>
+<input id="idade" name="idade" type="number" min="0" max="120" required />
+</div>
+<div>
+<label for="curso">Curso</label>
+<select id="curso" name="curso" required>
+<option value="">Selecione…</option>
+<option>JavaScript</option>
+<option>Python</option>
+<option>Java</option>
+</select>
+</div>
+<div>
+<label for="notaFinal">Nota Final</label>
+<input id="notaFinal" name="notaFinal" type="number" step="0.1" min="0" max="10" required />
+</div>
+</div>
+<div class="actions">
+<button class="btn primary" id="btnCadastrar" type="submit">Cadastrar</button>
+<button class="btn success" id="btnAtualizar" type="button" hidden>Atualizar</button>
+<button class="btn muted" id="btnLimpar" type="reset">Limpar</button>
+<button class="btn warn" id="btnSeed" type="button">Inserir exemplos</button>
+</div>
+</form>
+
+
+<table>
+<thead>
+<tr>
+<th>#</th><th>Nome</th><th>Idade</th><th>Curso</th><th>Nota</th><th>Status</th><th>Ações</th>
+</tr>
+</thead>
+<tbody id="tbodyAlunos"></tbody>
+</table>
+</section>
+
+
+<section class="card">
+<h2>Relatórios</h2>
+<div class="report-buttons">
+<button class="btn muted" id="btnAprovados">Listar aprovados (≥7)</button>
+<button class="btn muted" id="btnMediaNotas">Média das notas</button>
+<button class="btn muted" id="btnMediaIdades">Média das idades</button>
+<button class="btn muted" id="btnNomesAZ">Nomes A→Z</button>
+<button class="btn muted" id="btnQtdPorCurso">Qtd por curso</button>
+</div>
+<div id="saida" class="output"></div>
+</section>
+</main>
+
+
+<script src="js/app.js"></script>
+</body>
+</html>
